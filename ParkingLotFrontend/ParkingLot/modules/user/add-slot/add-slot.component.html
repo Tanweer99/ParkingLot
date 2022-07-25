@@ -1,0 +1,37 @@
+<div class="row mt-5">
+    <div class="col-6 m-auto">
+      <form [formGroup] = "bookSlotForm" (ngSubmit)="onFormSubmit()" autocomplete="off">
+        <div class="form-group my-2">
+          <label class="validate" for="name">Name</label> 
+          <input type="text" class="form-control"  formControlName="name" id="name"  placeholder="Enter name">
+          <span class="text-danger" *ngIf="bookSlotForm.get('name')?.touched && bookSlotForm.get('name')?.errors?.['required']" >Name is Required</span>
+        </div>
+
+        <div class="form-group mb-2">
+          <label class="validate" for="vehicleNumber">Vehicle Number</label>
+          <input type="text" class="form-control" formControlName="vehicleNumber" id="vehicleNUmber" placeholder="Enter vehicle number">
+          <div class="text-danger" *ngIf="bookSlotForm.get('vehicleNumber')?.touched && bookSlotForm.get('vehicleNumber')?.errors?.['required']" >Vehicle number is Required</div>
+          <div class="text-danger" *ngIf="bookSlotForm.get('vehicleNumber')?.touched  && bookSlotForm.get('vehicleNumber')?.errors?.['pattern']" >Invalid vehicle number</div>
+          <div class="text-danger" *ngIf="bookSlotForm.get('vehicleNumber')?.touched  && bookSlotForm.get('vehicleNumber')?.errors?.['maxlength']">Max 10-digit alphanumeric only</div>
+        </div>
+
+        <div class="form-group mb-2">
+          <label class="validate" for="entryTime">Entry Time</label>
+          <input type="datetime-local" class="form-control" formControlName="entryTime" (change)="setEntryDateTime($event)" id="entryTime">
+          <span class="text-danger" *ngIf="bookSlotForm.get('entryTime')?.touched && bookSlotForm.get('entryTime')?.errors?.['required']" >Entry time is Required</span>
+        </div>
+
+        <div class="form-group mb-2">
+          <label class="validate" for="exitTime">Exit Time</label>
+          <input type="datetime-local" class="form-control" formControlName="exitTime" (change)="checkDateTime($event)" id="exitTime">
+          <span class="text-danger" *ngIf="bookSlotForm.get('exitTime')?.touched && bookSlotForm.get('exitTime')?.errors?.['required']" >Exit time is Required</span>
+          <span class="text-danger" *ngIf="bookSlotForm.get('exitTime')?.touched && bookSlotForm.get('exitTime')?.errors?.['required'] || displayErrorMessage" >Exit Time should be greater than Entry Time!</span>
+        </div>
+
+        <div class=" text-center mb-4">
+          <button type="submit" [disabled]="!bookSlotForm.valid"  class="btn btn-primary btn-block"> Book Slot </button>
+        </div> 
+
+    </form>
+    </div>
+</div>

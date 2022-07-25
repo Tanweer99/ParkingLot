@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.validate::after {
+    content : '*';
+    color : red; 
+    margin-left: 2px;
+}
+
+.text-style {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+}
+
+.user-text{
+    font-weight: 500;
+}

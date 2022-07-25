@@ -1,0 +1,12 @@
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.csproj.AssemblyReference.cache
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.AssemblyInfoInputs.cache
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.AssemblyInfo.cs
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.csproj.CoreCompileInputs.cache
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\bin\Debug\net5.0\ParkingLot.Shared.deps.json
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\bin\Debug\net5.0\ParkingLot.Shared.dll
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\bin\Debug\net5.0\ParkingLot.Shared.pdb
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.dll
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\refint\ParkingLot.Shared.dll
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.pdb
+C:\Users\mdalam\Desktop\Assignment\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ref\ParkingLot.Shared.dll

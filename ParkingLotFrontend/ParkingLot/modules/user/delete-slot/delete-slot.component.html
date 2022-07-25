@@ -1,0 +1,37 @@
+<div class="row mt-5">
+    <div class="col-6 m-auto">
+        <div class="card border-success">
+            <div class="card-header bg-transparent border-success text-center"><b>Invoice</b></div>
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-6 text-style"> Name : </div>
+                    <div class="col-6 user-text">{{name}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 text-style"> Vehicle Number : </div>
+                    <div class="col-6 user-text">{{vehicleNumber}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 text-style"> Entry Time : </div>
+                    <div class="col-6 user-text">{{entryTime}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 text-style"> Exit Time : </div>
+                    <div class="col-6 user-text">{{exitTime}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 text-style"> To Pay : </div>
+                    <div class="col-6 user-text">Rs. {{toPay}}</div>
+                </div>
+
+            </div>
+            <div class="card-footer  bg-transparent border-success m-auto">
+                <button class="btn btn-primary" (click)="ExitSlot()">Exit</button>
+            </div>
+        </div>
+    </div>
+</div>
