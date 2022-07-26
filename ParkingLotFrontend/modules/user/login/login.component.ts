@@ -23,10 +23,14 @@ export class LoginComponent implements OnInit {
   requestedFrom : any
 
   onFormSubmit(){
+    // console.log(this.loginForm.value);
     this.requestedFrom = this.currentRoute.snapshot.params['page'];
+
+    // console.log(this.requestedFrom);
     
     this.bookSlotService.Authentication(this.loginForm.get('name')?.value, this.loginForm.get('vehicleNumber')?.value).subscribe(
       (res) => {
+        // console.log(res.userSlot);
         if(res.userSlot != null){
           localStorage.setItem('id', res.userSlot.id);
           localStorage.setItem('name', res.userSlot.name);

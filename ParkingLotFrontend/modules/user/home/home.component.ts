@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookSlotService } from 'src/service/book-slot.service';
 import { SlotService } from 'src/service/slot.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class HomeComponent implements OnInit {
   totalSlots = 10
   availableSlots : any
   bookedSlots : any
+
 
   ngOnInit(): void {
     this.slotService.CountAvailableSlot().subscribe(

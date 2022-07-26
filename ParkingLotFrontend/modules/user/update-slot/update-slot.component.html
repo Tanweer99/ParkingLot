@@ -24,9 +24,8 @@
 
       <div class="form-group mb-2">
         <label class="validate" for="exitTime">Exit Time</label>
-        <input type="datetime-local" class="form-control" formControlName="exitTime" (change)="checkDateTime($event)" id="exitTime">
+        <input type="datetime-local" class="form-control" formControlName="exitTime" id="exitTime">
         <span class="text-danger" *ngIf="updateSlotForm.get('exitTime')?.touched && updateSlotForm.get('exitTime')?.errors?.['required']" >Exit time is Required</span>
-        <span class="text-danger" *ngIf="updateSlotForm.get('exitTime')?.touched && updateSlotForm.get('exitTime')?.errors?.['required'] || displayErrorMessage" >Exit Time should be greater than Entry Time!</span>
       </div>
 
       <div class=" text-center mb-4">

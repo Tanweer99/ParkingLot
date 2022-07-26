@@ -12,7 +12,7 @@ export class DeleteSlotComponent implements OnInit {
   constructor(private route : Router, private bookSlotService : BookSlotService) { }
 
   id : any
-  name : any
+  name : any;
   vehicleNumber :any
   slotNumber : any
   entryTime : any

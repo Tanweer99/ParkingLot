@@ -52,22 +52,4 @@ export class UpdateSlotComponent implements OnInit {
     )
   }
 
-
-  calculateDateDuration(startDate:any, endDate:any){
-    var timeDifference = (new Date(endDate).getTime() - new Date(startDate).getTime()) / (1000);
-    timeDifference /= 60;
-    return (Math.round(timeDifference));
-  }
-
-  displayErrorMessage = false
-
-  checkDateTime(event : any){
-    var timeDifference = this.calculateDateDuration(localStorage.getItem('entryTime'), event.target.value);
-    if(timeDifference <= 0){
-      this.displayErrorMessage = true;
-    }else{
-      this.displayErrorMessage = false;
-    }
-  }
-
 }

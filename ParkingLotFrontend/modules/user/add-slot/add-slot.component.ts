@@ -5,7 +5,8 @@ import { SlotService } from 'src/service/slot.service';
 
 @Component({
   selector: 'app-add-slot',
-  templateUrl: './add-slot.component.html'
+  templateUrl: './add-slot.component.html',
+  styleUrls: ['./add-slot.component.css']
 })
 export class AddSlotComponent implements OnInit {
 
