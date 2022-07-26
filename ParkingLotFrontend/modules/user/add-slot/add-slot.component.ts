@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { BookSlotService } from 'src/service/book-slot.service';
 import { SlotService } from 'src/service/slot.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-slot',
   templateUrl: './add-slot.component.html',
@@ -10,7 +10,7 @@ import { SlotService } from 'src/service/slot.service';
 })
 export class AddSlotComponent implements OnInit {
 
-  constructor(private bookSlotService : BookSlotService, private slotService : SlotService) { }
+  constructor(private bookSlotService : BookSlotService, private slotService : SlotService, private route:Router) { }
 
   bookSlotForm = new FormGroup({
     name : new FormControl('', [Validators.required]),
@@ -19,9 +19,15 @@ export class AddSlotComponent implements OnInit {
     entryTime : new FormControl('', [Validators.required]),
     exitTime : new FormControl('', [Validators.required])
   });
-
+  username:any
   ngOnInit(): void {
-    
+    this.username = localStorage.getItem('name');
+    if(this.username == null){
+      this.route.navigate(['signin']);
+    }
+    this.bookSlotForm.patchValue({
+      name:this.username
+    })
   }
 
   slotNumber : any

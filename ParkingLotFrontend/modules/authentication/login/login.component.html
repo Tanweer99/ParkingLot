@@ -1,0 +1,25 @@
+<div class="row mt-5">
+  <div class="col-6 m-auto">
+    <form [formGroup] = "loginForm" (ngSubmit)="onFormSubmit()" autocomplete="off">
+      <div class="form-group my-2">
+        <label class="validate" for="email">Email</label>
+        <input type="text" class="form-control"  formControlName="email" id="email"  placeholder="Enter emailid">
+        <span class="text-danger" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required']" >email is required and format : hello@gmail.com</span>
+      </div>
+
+      <div class="form-group mb-2">
+        <label class="validate" for="password">Password</label>
+        <input type="text" class="form-control" formControlName="password" id="password" placeholder="Enter password">
+        <span class= "text-danger" *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+          Minimum length is 8 and it must have at-least 1 special character, 1 number and 1 alphabet 
+        </span>   
+      </div>
+
+      <div class=" text-center mb-4">
+        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary btn-block"> Login </button>
+      </div> 
+
+  </form>
+  </div>
+</div>
+

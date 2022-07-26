@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddSlotComponent } from 'modules/user/add-slot/add-slot.component';
 import { DeleteSlotComponent } from 'modules/user/delete-slot/delete-slot.component';
 import { HomeComponent } from 'modules/user/home/home.component';
-import { LoginComponent } from 'modules/user/login/login.component';
+import { LoginComponent } from 'modules/authentication/login/login.component';
 import { PageNotFoundComponent } from 'modules/user/page-not-found/page-not-found.component';
 import { UpdateSlotComponent } from 'modules/user/update-slot/update-slot.component';
-
+import { SignupComponent } from 'modules/authentication/signup/signup.component';
 const routes: Routes = [
   {
     path : "addSlot", component : AddSlotComponent
@@ -18,10 +18,13 @@ const routes: Routes = [
     path : "deleteSlot", component : DeleteSlotComponent
   },
   {
-    path : "login/:page", component : LoginComponent, 
+    path : "updateSlot", component : UpdateSlotComponent
   },
   {
-    path : "updateSlot", component : UpdateSlotComponent
+    path : "signup", component: SignupComponent
+  },
+  {
+    path : "signin" , component: LoginComponent
   },
   {
     path: "", redirectTo : "home", pathMatch : "full"

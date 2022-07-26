@@ -24,7 +24,7 @@ export class DeleteSlotComponent implements OnInit {
   ngOnInit(): void {
     this.name = localStorage.getItem('name');
     if(this.name == null){
-      this.route.navigate(['login/delete']);
+      this.route.navigate(['signin']);
     }
 
     this.id = localStorage.getItem('id');

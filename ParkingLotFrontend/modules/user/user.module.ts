@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
 import { UpdateSlotComponent } from './update-slot/update-slot.component';
 import { AddSlotComponent } from './add-slot/add-slot.component';
 import { DeleteSlotComponent } from './delete-slot/delete-slot.component';
@@ -12,7 +11,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     HomeComponent,
-    LoginComponent,
     UpdateSlotComponent,
     AddSlotComponent,
     DeleteSlotComponent,

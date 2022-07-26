@@ -25,7 +25,7 @@ export class UpdateSlotComponent implements OnInit {
   ngOnInit(): void {
     this.name = localStorage.getItem('name');
     if(this.name == null){
-      this.route.navigate(['login/update']);
+      this.route.navigate(['signin']);
     }
 
     this.updateSlotForm.patchValue({
