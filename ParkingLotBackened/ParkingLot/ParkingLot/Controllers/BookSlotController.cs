@@ -26,12 +26,15 @@ namespace ParkingLot.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddSlot([FromBody] BookSlotDTO bookSlotDTO)
+        [Route("AddSlot/{email}")]
+        public async Task<IActionResult> AddSlot([FromBody] BookSlotDTO bookSlotDTO, string email)
         {
             var slotNumber = await _slotBLL.UpdateSlot();
             if(slotNumber != -1)
             {
+                bookSlotDTO.Email = email;
                 bookSlotDTO.SlotNumber = slotNumber;
+                bookSlotDTO.Status = true;
                 var result = await _bookSlotBLL.AddSlot(bookSlotDTO);
                 return Ok(new { SlotNumber = slotNumber});
             }

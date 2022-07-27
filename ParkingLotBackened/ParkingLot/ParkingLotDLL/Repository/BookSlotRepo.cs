@@ -88,6 +88,7 @@ namespace ParkingLotDLL.Repository
                 var toBeDeletedSlot = await _bookSlotCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
                 var slotNumber = toBeDeletedSlot.SlotNumber;
                 toBeDeletedSlot.SlotNumber = 0;
+                toBeDeletedSlot.Status = false;
                 await _bookSlotCollection.ReplaceOneAsync(x => x.Id == id, toBeDeletedSlot);
                 var result = await _slotRepo.UpdateDeleteSlot(slotNumber);
                 if (result)

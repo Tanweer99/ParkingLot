@@ -52,6 +52,8 @@ namespace ParkingLot
             services.AddSingleton<IBookSlotBLL, BookSlotBLL>();
             services.AddSingleton<ISlotRepo, SlotRepo>();
             services.AddSingleton<ISlotBLL, SlotBLL>();
+            services.AddSingleton<IAuthenticationRepo, AuthenticationRepo>();
+            services.AddSingleton<IAuthenticationBLL, AuthenticationBLL>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

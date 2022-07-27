@@ -20,6 +20,9 @@ namespace ParkingLot.Shared.Entity
         [BsonElement("name")]
         public string Name { get; set; }
 
+        [BsonElement("email")]
+        public string Email { get; set; }
+
         [BsonElement("slotNumber")]
         public int SlotNumber { get; set; }
 
@@ -29,5 +32,7 @@ namespace ParkingLot.Shared.Entity
         [BsonElement("exitTime")]
         public string ExitTime { get; set; }
 
+        [BsonElement("status")]
+        public bool Status { get; set; }
     }
 }

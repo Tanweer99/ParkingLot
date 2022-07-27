@@ -6,5 +6,6 @@
         string DatabaseName { get; set; }
         string BookSlotCollectionName { get; set; }
         string SlotCollectionName { get; set; }
+        string AuthenticationCollectionName { get; set; }
     }
 }

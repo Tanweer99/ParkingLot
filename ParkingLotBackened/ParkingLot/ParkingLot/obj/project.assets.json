@@ -1082,11 +1082,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
+      "projectUniqueName": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
       "projectName": "ParkingLot",
-      "projectPath": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
+      "projectPath": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
       "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot\\obj\\",
+      "outputPath": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1103,14 +1103,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
-              "projectPath": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
+            "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
+              "projectPath": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
             },
-            "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
-              "projectPath": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj"
+            "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
+              "projectPath": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj"
             },
-            "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
-              "projectPath": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
+            "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
+              "projectPath": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
             }
           }
         }

@@ -195,11 +195,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+      "projectUniqueName": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
       "projectName": "ParkingLot.Shared",
-      "projectPath": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+      "projectPath": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
       "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\obj\\",
+      "outputPath": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
