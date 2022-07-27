@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   onFormSubmit(){
     this.authenticationService.Authentication(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value).subscribe(
        (res) => {
-           if(res.auth == true){
+           if(res.isAuth == true){
               if(res.isAdmin == true){
                  this.route.navigate([''])
               }
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
                        localStorage.setItem('slotNumber', res.userSlot.slotNumber);
                        localStorage.setItem('entryTime', res.userSlot.entryTime);
                        localStorage.setItem('exitTime', res.userSlot.exitTime);
+                       localStorage.setItem('email',res.userSlot.email);
                        this.route.navigate(['']);
                     } 
               }

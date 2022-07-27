@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserModule } from 'modules/user/user.module';
 import { AuthenticationModule } from 'modules/authentication/authentication.module';
+import { AdminModule } from 'modules/admin/admin.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +18,8 @@ import { AuthenticationModule } from 'modules/authentication/authentication.modu
     HttpClientModule,
     NgbModule,
     UserModule,
-    AuthenticationModule
+    AuthenticationModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

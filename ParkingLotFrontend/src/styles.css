@@ -15,3 +15,17 @@
 .user-text{
     font-weight: 500;
 }
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.box{
+    display: flex;
+}
+.push{
+    margin-left: auto;
+}
+.logout{
+    margin-left: 10px;
+}
