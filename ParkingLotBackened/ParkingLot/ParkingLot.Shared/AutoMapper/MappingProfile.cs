@@ -15,6 +15,9 @@ namespace ParkingLot.Shared.AutoMapper
         {
             CreateMap<BookSlot, BookSlotDTO>().ReverseMap();
             CreateMap<Slot, SlotDTO>().ReverseMap();
+            CreateMap<SignUp, SignUpDTO>().ReverseMap();
+            CreateMap<RegisterMessage, RegisterMessageDTO>().ReverseMap();
+            CreateMap<LoginMessage, LoginMessageDTO>().ReverseMap();
         }
     }
 }

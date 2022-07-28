@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t/8W7f9lCfI93b0bgsn/oQXpz4/VWh9+/hPW8gqu4E4IJjQGC3kukCcGFPecrOkXXfrWXwHVrjssZuoKyjzOow==",
+  "dgSpecHash": "qFLf9TQMShhgSHI/OlNF99WYS9Df9OK+iaY96c72YWmgbX/omLGoEXDPZL/j0Yk9o4v4g/Wgl5mTq1opyRpRGg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mdalam\\Desktop\\Assignment\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+  "projectFilePath": "D:\\COX-Assignment\\NewProject\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mdalam\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\mdalam\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

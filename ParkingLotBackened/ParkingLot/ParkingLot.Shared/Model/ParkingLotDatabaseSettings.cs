@@ -14,5 +14,6 @@ namespace ParkingLot.Shared.Model
 
         public string BookSlotCollectionName { get; set; }
         public string SlotCollectionName { get; set; }
+        public string AuthenticationCollectionName { get; set; }
     }
 }
