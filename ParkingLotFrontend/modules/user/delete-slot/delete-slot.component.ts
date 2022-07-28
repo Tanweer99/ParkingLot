@@ -20,20 +20,25 @@ export class DeleteSlotComponent implements OnInit {
   toPay : any
   timeDuration : any
 
-  
-  ngOnInit(): void {
-    this.name = localStorage.getItem('name');
-    if(this.name == null){
-      this.route.navigate(['signin']);
-    }
+  showdiv=false
 
-    this.id = localStorage.getItem('id');
+  ngOnInit(): void {
+
     this.name = localStorage.getItem('name');
+    this.id = localStorage.getItem('id');
     this.vehicleNumber = localStorage.getItem('vehicleNumber'),
     this.slotNumber = localStorage.getItem('slotNumber'),
     this.entryTime = localStorage.getItem('entryTime'),
     this.exitTime = localStorage.getItem('exitTime')
     this.toPay = Math.round(this.calculateDateDuration(this.entryTime, this.exitTime) * (0.10));
+
+    if(this.id == null){
+      this.showdiv=true
+    }
+    else{
+      this.showdiv=false;
+    }
+
   }
 
 
@@ -46,6 +51,7 @@ export class DeleteSlotComponent implements OnInit {
           alert('Exited Successfully!');
           this.route.navigate(['home']);
           localStorage.clear();
+          window.location.reload()
         }
         else{
           alert('Some went wrong!');
@@ -53,6 +59,7 @@ export class DeleteSlotComponent implements OnInit {
       },
       (err) => { console.log(err); }
     )
+
   }
 
 
@@ -61,4 +68,5 @@ export class DeleteSlotComponent implements OnInit {
     timeDifference /= 60;
     return Math.abs(Math.round(timeDifference));
   }
+  
 }

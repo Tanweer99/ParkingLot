@@ -19,6 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+  ],
+  exports:[
+    AddSlotComponent
   ]
 })
 export class UserModule { }

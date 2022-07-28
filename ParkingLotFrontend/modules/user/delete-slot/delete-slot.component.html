@@ -1,6 +1,7 @@
-<div class="row mt-5">
-    <div class="col-6 m-auto">
-        <div class="card border-success">
+<div *ngIf="showdiv">
+        <h5 class="text-danger">Please book slot first</h5>
+</div>
+<div class="card border-success" *ngIf="!showdiv">
             <div class="card-header bg-transparent border-success text-center"><b>Invoice</b></div>
             <div class="card-body ">
                 <div class="row">
@@ -32,6 +33,5 @@
             <div class="card-footer  bg-transparent border-success m-auto">
                 <button class="btn btn-primary" (click)="ExitSlot()">Exit</button>
             </div>
-        </div>
-    </div>
 </div>
+    

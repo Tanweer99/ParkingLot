@@ -1,11 +1,14 @@
-<div class="row mt-1">
-    <div class="col-6 m-auto">
-        <form [formGroup]="signupForm" (ngSubmit)="onFormSubmit()">
+<div class="outerdiv">
+    <div class="innerdiv">
+        <img src="assets/logo1.png" width="60px" height="60px" style="margin-left: 41%;">
+        <br/>
+        <h1 class="title">SignUp Form </h1>
+        <form [formGroup]="signupForm " (ngSubmit)="onFormSubmit()">
             <div class="mb-3">
-                <label for="name" class="validate">Full Name</label>
-                <input type="text" class="form-control" name="name" placeholder="enter name" formControlName="name">
-                <span class = "text-danger" *ngIf="!signupForm.get('name')?.valid && signupForm.get('name')?.touched">
-                    name is required and should contain only alphabets
+                <label for="fullName" class="validate">Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="enter name" formControlName="fullName">
+                <span class="text-danger" *ngIf="!signupForm .get('fullName')?.valid && signupForm .get('fullName')?.touched">
+                    Fullname is required and should contain only alphabets
                 </span>    
             </div>
             <div class="mb-3">
@@ -16,25 +19,27 @@
                 </span>  
                 <span class="text-danger" *ngIf="!emailAvailable">
                     Email already taken
-                </span> 
+                </span>  
             </div>
             <div class="mb-3">
                 <label for="password"  class="validate">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="enter password" formControlName="password">
-                <span class= "text-danger" *ngIf="!signupForm.get('password')?.valid && signupForm.get('password')?.touched">
+                <span class="text-danger" *ngIf="!signupForm.get('password')?.valid && signupForm.get('password')?.touched">
                     Minimum length is 8 and it must have at-least 1 special character, 1 number and 1 alphabet 
                 </span>    
             </div>
             <div class="mb-3">
-                <label for="confirmPassword"  class="validate">Confirm Password</label>
-                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="enter confirm password" formControlName="confirmPassword">
-                <span style="color: red;" *ngIf="(signupForm.get('ConfirmPassword')?.value != signupForm.get('password')?.value)&& !signupForm.get('confirmPassword')?.valid && signupForm.get('confirmPassword')?.touched">
+                <label for="confirmpassword"  class="validate">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="enter confirm password" formControlName="confirmPassword">
+                <span class="text-danger" *ngIf="(signupForm.get('ConfirmPassword')?.value != signupForm.get('Password')?.value)&& !signupForm.get('confirmPassword')?.valid && signupForm.get('confirmPassword')?.touched">
                     Password mismatches 
                 </span>   
             </div>
+        
             <div class="mb-3">
                 <label for="bank"  class="validate">Bank</label>
                 <div style="position: relative;">
+                
                 <select required class="form-control" name="bank" id="bank" formControlName="bank">
                     <option value="SBI">SBI</option>
                     <option value="ICICI">ICICI</option>
@@ -51,9 +56,10 @@
             <div class="mb-3">
                 <label for="accountNumber"  class="validate">Bank Account Number</label>
                 <input type="text" class="form-control" id="accountNumber" name="accountNumber" formControlName="accountNumber" placeholder="enter account number">
-                <span style="color: red;" *ngIf="!signupForm.get('accountNumber')?.valid && signupForm.get('accountNumber')?.touched">
+                <span *ngIf="!signupForm.get('accountNumber')?.valid && signupForm.get('accountNumber')?.touched">
                     Bank account number is required and should be 12 digit numeric only 
                 </span>
+                
             </div>
             <button type="submit" class="btn btn-success" [disabled]="!signupForm.valid">Signup</button>
         </form>

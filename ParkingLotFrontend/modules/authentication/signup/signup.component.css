@@ -1,0 +1,45 @@
+.outerdiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(169, 193, 202);
+    
+}
+.innerdiv{
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 24px;
+   background: white;
+   margin-top: 5%;
+    margin-bottom: 5%;
+}
+.title{
+    color:rgb(74, 162, 194) ;
+    margin-left:25%;
+}
+.validate:after{
+    content: '*';
+    color:red;
+    margin-left: 5px;
+  }
+  input.ng-invalid.ng-touched{
+    border:3px solid red;
+  }
+  input.ng-valid.ng-touched{
+      border:3px solid rgb(76, 196, 76);
+  }
+  label{
+      font-size: 20px;
+      font-weight: 500;
+      font-family: sans-serif;
+      
+  }
+  .message{
+      margin-top: 6px;
+  }
+  button{
+      width: 100%;
+  }

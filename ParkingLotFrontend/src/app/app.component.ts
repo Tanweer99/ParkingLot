@@ -14,12 +14,14 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.name = localStorage.getItem('name');
+    
     if(this.name == null){
        this.usename=false
     }
     else{
       this.usename=true
     }
+
   }
 
   onlogout(){

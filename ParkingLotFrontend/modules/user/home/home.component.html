@@ -1,5 +1,39 @@
-<div class="row ">
+<!-- header -->
 
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary" routerLink="home"><b>Online Parking System</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-lg-0">
+          <li class="nav-item ">
+            <div class="text-primary navBar-div-li-width" data-bs-toggle="modal" data-bs-target="#bookSlot">
+              Book Slot
+            </div>
+          </li>
+          <li class="nav-item ">
+            <div  class="text-primary  navBar-div-li-width" data-bs-toggle="modal" data-bs-target="#updateSlot">
+              Update Slot
+            </div>
+          </li>
+          <li class="nav-item">
+            <div  class="text-primary navBar-div-li-width" data-bs-toggle="modal" data-bs-target="#exitSlot">
+              Exit Slot
+            </div>
+          </li>
+        </ul>
+        <div class="d-flex" >
+          <button class="logout btn btn-danger" (click)="onlogout()">logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Home Page content start-->
+
+  <div class="row ">
     <div class="col-12 m-auto mt-5 text-center card" style="width: 18rem;">
         <div class="card-body fs-4">
             <b>Total Slots :</b> {{totalSlots}}
@@ -22,3 +56,50 @@
         </div>
     </div>
 </div>
+
+  <!-- Home page content ends -->
+
+  <!-- Book Slot modal -->
+  <div class="modal fade" id="bookSlot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLabel" >Book Slot</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-add-slot></app-add-slot>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--Update Slot Modal-->
+  <div class="modal fade" id="updateSlot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLabel">Update Slot</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-update-slot></app-update-slot>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Exit Slot Modal-->
+  <div class="modal fade" id="exitSlot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalLabel">Exit Slot</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-delete-slot></app-delete-slot>
+        </div> 
+    </div>
+  </div> 

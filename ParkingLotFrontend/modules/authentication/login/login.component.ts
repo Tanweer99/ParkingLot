@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
@@ -23,9 +24,11 @@ export class LoginComponent implements OnInit {
   onFormSubmit(){
     this.authenticationService.Authentication(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value).subscribe(
        (res) => {
-           if(res.isAuth == true){
+         console.log(res);
+         
+            if(res.isAuth == true){
               if(res.isAdmin == true){
-                 this.route.navigate([''])
+                 this.route.navigate(['dashboard'])
               }
               else{
                 if(res.userSlot != null){
@@ -36,10 +39,14 @@ export class LoginComponent implements OnInit {
                        localStorage.setItem('entryTime', res.userSlot.entryTime);
                        localStorage.setItem('exitTime', res.userSlot.exitTime);
                        localStorage.setItem('email',res.userSlot.email);
-                       this.route.navigate(['']);
-                    } 
-              }
-           }
+                       this.route.navigate(['home']);
+                  }
+                  else{
+                    localStorage.setItem('email', this.loginForm.get('email')?.value)
+                    this.route.navigate(['home'])
+                  } 
+                }
+            }
            else{
             alert('Invalid Credentials!');
             window.location.reload();
@@ -47,6 +54,9 @@ export class LoginComponent implements OnInit {
        },
        (err) => {console.log(err)}
     )
+  }
+  signup() {
+    this.route.navigate(['signup']);
   }
 }
 

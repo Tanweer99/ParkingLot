@@ -10,23 +10,21 @@ import { BookSlotService } from 'src/service/book-slot.service';
 export class UpdateSlotComponent implements OnInit {
 
   constructor(private route : Router, private bookSlotService : BookSlotService) { }
-
-  name : any
+  
   disabled = true
+  showdiv=false
 
   updateSlotForm = new FormGroup({
+
     name : new FormControl('', [Validators.required]),
     vehicleNumber : new FormControl('', [Validators.required, Validators.pattern("^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$"), Validators.maxLength(10)]),
     slotNumber : new FormControl('0', [Validators.required]),
     entryTime : new FormControl('', [Validators.required]),
     exitTime : new FormControl('', [Validators.required])
+
   });
 
   ngOnInit(): void {
-    this.name = localStorage.getItem('name');
-    if(this.name == null){
-      this.route.navigate(['signin']);
-    }
 
     this.updateSlotForm.patchValue({
       name : localStorage.getItem('name'),
@@ -35,10 +33,18 @@ export class UpdateSlotComponent implements OnInit {
       entryTime : localStorage.getItem('entryTime'),
       exitTime : localStorage.getItem('exitTime'),
     });
-    
+
+    if(localStorage.getItem('id')==null){
+      this.showdiv=true
+    }
+    else{
+      this.showdiv=false
+    }
+
   }
 
   onFormSubmit(){
+
     this.bookSlotService.UpdateUserBookedSlot(localStorage.getItem('id'), this.updateSlotForm.value).subscribe(
       (res) => {
         if(res) {
@@ -52,4 +58,5 @@ export class UpdateSlotComponent implements OnInit {
     )
   }
 
+  
 }

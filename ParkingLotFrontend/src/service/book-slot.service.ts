@@ -16,8 +16,8 @@ export class BookSlotService {
     return this._httpClient.get(`${this._baseURL}/api/BookSlot`);
   }
 
-  AddSlot(bookSlot:any) : Observable<any>{
-    return this._httpClient.post(`${this._baseURL}/api/BookSlot`, bookSlot);
+  AddSlot(bookSlot:any,email:any) : Observable<any>{
+    return this._httpClient.post(`${this._baseURL}/api/BookSlot/AddSlot/${email}`, bookSlot);
   }
 
   GetUserSlot(slotNumber : any) : Observable<any>{

@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
   emailAvailable=true
   signupForm = new FormGroup({
     email: new FormControl(null, [Validators.email, Validators.required]),
-    name: new FormControl(null, [Validators.required, Validators.pattern(/^[a-zA-Z_ ]*$/), Validators.maxLength(255)]),
+    fullName: new FormControl(null, [Validators.required, Validators.pattern(/^[a-zA-Z_ ]*$/), Validators.maxLength(255)]),
     bank: new FormControl(null, [Validators.required]),
     accountNumber: new FormControl(null, [Validators.required, Validators.maxLength(12), Validators.minLength(12)]),
     password: new FormControl(null, [Validators.required, Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/)]),

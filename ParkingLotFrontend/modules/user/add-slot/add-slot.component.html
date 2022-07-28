@@ -1,6 +1,4 @@
-<div class="row mt-5">
-    <div class="col-6 m-auto">
-      <form [formGroup] = "bookSlotForm" (ngSubmit)="onFormSubmit()" autocomplete="off">
+<form [formGroup] = "bookSlotForm" (ngSubmit)="onFormSubmit()" autocomplete="off">
         <div class="form-group my-2">
           <label class="validate" for="name">Name</label> 
           <input type="text" class="form-control"  formControlName="name" id="name"  placeholder="Enter name">
@@ -31,7 +29,4 @@
         <div class=" text-center mb-4">
           <button type="submit" [disabled]="!bookSlotForm.valid"  class="btn btn-primary btn-block"> Book Slot </button>
         </div> 
-
-    </form>
-    </div>
-</div>
+</form>
