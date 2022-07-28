@@ -13,6 +13,7 @@ export class UpdateSlotComponent implements OnInit {
   
   disabled = true
   showdiv=false
+  email:any
 
   updateSlotForm = new FormGroup({
 
@@ -21,7 +22,6 @@ export class UpdateSlotComponent implements OnInit {
     slotNumber : new FormControl('0', [Validators.required]),
     entryTime : new FormControl('', [Validators.required]),
     exitTime : new FormControl('', [Validators.required])
-
   });
 
   ngOnInit(): void {
@@ -40,12 +40,13 @@ export class UpdateSlotComponent implements OnInit {
     else{
       this.showdiv=false
     }
+    this.email = localStorage.getItem('email')
 
   }
 
   onFormSubmit(){
 
-    this.bookSlotService.UpdateUserBookedSlot(localStorage.getItem('id'), this.updateSlotForm.value).subscribe(
+    this.bookSlotService.UpdateUserBookedSlot(localStorage.getItem('id'), this.updateSlotForm.value,this.email).subscribe(
       (res) => {
         if(res) {
           alert('Your Slot updated Successfully!')
