@@ -35,8 +35,9 @@ namespace ParkingLot.Controllers
                 bookSlotDTO.Email = email;
                 bookSlotDTO.SlotNumber = slotNumber;
                 bookSlotDTO.Status = true;
-                var result = await _bookSlotBLL.AddSlot(bookSlotDTO);
-                return Ok(new { SlotNumber = slotNumber});
+                await _bookSlotBLL.AddSlot(bookSlotDTO);
+                var userSlot = await _bookSlotBLL.GetUserSlot(slotNumber);
+                return Ok(new { userSlot = userSlot });
             }
             else
             {
@@ -60,10 +61,12 @@ namespace ParkingLot.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateUserBookedSlot/{id}")]
-        public async Task<IActionResult> UpdateUserBookedSlot([FromBody] BookSlotDTO bookSlotDTO, string id)
+        [Route("UpdateUserBookedSlot/{id}/{email}")]
+        public async Task<IActionResult> UpdateUserBookedSlot([FromBody] BookSlotDTO bookSlotDTO, string id, string email)
         {
             bookSlotDTO.Id = id;
+            bookSlotDTO.Email = email;
+            bookSlotDTO.Status = true;
             var result = await _bookSlotBLL.UpdateUserBookedSlot(id, bookSlotDTO);
             if (result)
             {

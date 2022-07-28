@@ -28,3 +28,18 @@ D:\COX-Assignment\ParkingLot\ParkingLot\ParkingLotBackened\ParkingLot\ParkingLot
 D:\COX-Assignment\ParkingLot\ParkingLot\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\refint\ParkingLotDLL.dll
 D:\COX-Assignment\ParkingLot\ParkingLot\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.pdb
 D:\COX-Assignment\ParkingLot\ParkingLot\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ref\ParkingLotDLL.dll
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\bin\Debug\net5.0\ParkingLotDLL.deps.json
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\bin\Debug\net5.0\ParkingLotDLL.dll
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\bin\Debug\net5.0\ParkingLotDLL.pdb
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\bin\Debug\net5.0\ParkingLot.Shared.dll
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\bin\Debug\net5.0\ParkingLot.Shared.pdb
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.csproj.AssemblyReference.cache
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.AssemblyInfoInputs.cache
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.AssemblyInfo.cs
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.csproj.CoreCompileInputs.cache
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.csproj.CopyComplete
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.dll
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\refint\ParkingLotDLL.dll
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ParkingLotDLL.pdb
+C:\Users\mdalam\Desktop\New folder\ParkingLotBackened\ParkingLot\ParkingLotDLL\obj\Debug\net5.0\ref\ParkingLotDLL.dll
