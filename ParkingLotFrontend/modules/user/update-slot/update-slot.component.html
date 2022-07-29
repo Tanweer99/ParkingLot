@@ -1,5 +1,5 @@
 <div *ngIf="showdiv">
-  <h5 class="text-dander">Please book slot first</h5>
+  <h5 class="text-danger text-center">Please book slot first</h5>
 </div>
 <div *ngIf="!showdiv">
 <form [formGroup] = "updateSlotForm" (ngSubmit)="onFormSubmit()" autocomplete="off">

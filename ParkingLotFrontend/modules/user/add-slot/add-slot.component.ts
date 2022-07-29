@@ -23,11 +23,19 @@ export class AddSlotComponent implements OnInit {
   });
 
   email:any
+  id : any
+  showDiv = false
 
   ngOnInit(): void {
 
     this.email = localStorage.getItem('email')
-
+    this.id = localStorage.getItem('id');
+    if(this.id == null){
+      this.showDiv = false;
+    }
+    else{
+      this.showDiv = true;
+    }
   }
 
   slotNumber : any
