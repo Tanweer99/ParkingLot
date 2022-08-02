@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ParkingLot.Shared.DTO;
 using ParkingLot.Shared.Interface.BLL;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 namespace ParkingLot.Controllers
 {
     [ApiController]
+    [Authorize(Roles = "User")]
     [Route("api/[controller]")]
     public class BookSlotController : Controller
     {

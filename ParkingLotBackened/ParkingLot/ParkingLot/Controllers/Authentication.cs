@@ -1,7 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using ParkingLot.Shared.DTO;
 using ParkingLot.Shared.Interface.BLL;
 using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ParkingLot.Controllers
@@ -11,15 +16,18 @@ namespace ParkingLot.Controllers
     public class Authentication : Controller
     {
         private readonly IAuthenticationBLL _authenticationBLL;
-        public Authentication(IAuthenticationBLL authenticationBLL)
+        private readonly IConfiguration _configuration;
+        public Authentication(IAuthenticationBLL authenticationBLL, IConfiguration configuration)
         {
-            _authenticationBLL = authenticationBLL; 
+            _authenticationBLL = authenticationBLL;
+            _configuration = configuration;
         }
 
         [HttpPost]
         public async Task<IActionResult> Register(SignUpDTO signUpDTO)
         {
             RegisterMessageDTO result = new RegisterMessageDTO();
+            
             result = await _authenticationBLL.Register(signUpDTO);   
             if (result.IsSuccess == true)
             {
@@ -44,7 +52,30 @@ namespace ParkingLot.Controllers
             {
                 return BadRequest();
             }
-            return Ok(result);
+
+            var role = result.IsAdmin == true ? "Admin" : "User" ;
+
+            var key = Encoding.UTF8.GetBytes(_configuration["ApplicationSettings:JWT_Secret"].ToString());
+
+            var tokenhandler = new JwtSecurityTokenHandler();
+     
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[] {
+
+                          new Claim(ClaimTypes.Role, role),
+                          new Claim(ClaimTypes.Email, email)
+            }),
+                Expires = DateTime.UtcNow.AddDays(1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var Genratedtoken = tokenhandler.CreateToken(tokenDescriptor);
+            var token = tokenhandler.WriteToken(Genratedtoken);
+
+            return Ok(new { 
+                result = result,
+                token = token
+            });
         }
     }
 }

@@ -27,6 +27,7 @@ namespace ParkingLot.Shared.Entity
         public string AccountNUmber { get; set; }
 
         [BsonElement("password")]
+
         public string Password { get; set; }
 
         [BsonElement("isAdmin")]

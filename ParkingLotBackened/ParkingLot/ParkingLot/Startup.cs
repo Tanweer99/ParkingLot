@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ParkingLot.Shared.AutoMapper;
 using ParkingLot.Shared.Interface.BLL;
@@ -18,6 +20,7 @@ using ParkingLotDLL.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ParkingLot
@@ -39,6 +42,9 @@ namespace ParkingLot
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+          
+
+            
 
             services.Configure<ParkingLotDatabaseSettings>(
                 Configuration.GetSection(nameof(ParkingLotDatabaseSettings)));
@@ -47,6 +53,29 @@ namespace ParkingLot
 
             //add automapper
             services.AddSingleton<IMapper>(sp => _mapperConfiguration.CreateMapper());
+
+            // JWT Implementation
+
+            var key = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JWT_Secret"].ToString());
+
+            services.AddAuthentication(au =>
+            {
+                au.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                au.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                au.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(Jwt =>
+            {
+                Jwt.RequireHttpsMetadata = false;
+                Jwt.SaveToken = false;
+                Jwt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                   ClockSkew= TimeSpan.Zero
+                };
+            });
 
             services.AddSingleton<IBookSlotRepo, BookSlotRepo>();
             services.AddSingleton<IBookSlotBLL, BookSlotBLL>();
@@ -80,6 +109,8 @@ namespace ParkingLot
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
