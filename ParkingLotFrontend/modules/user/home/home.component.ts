@@ -14,19 +14,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private slotService : SlotService, private router: Router, private bookSlotService:BookSlotService) { }
  
-  //slotNumber : any
   numberOfAvailableSlots : any
-  //getEntryDateTime : any
-  //displayErrorMessage = false
-  //email:any
-  //disabled = true
-  //id : any
-  //name : any;
-  //vehicleNumber :any
-  //entryTime : any
-  //exitTime : any
-  //toPay : any
-  //timeDuration : any
   totalSlots = 10
   availableSlots : any
   bookedSlots :any
@@ -38,17 +26,9 @@ export class HomeComponent implements OnInit {
           this.bookedSlots = this.totalSlots - res.count;
       }
     )
-
-    // this.email = localStorage.getItem('email')
-    // this.id = localStorage.getItem('id');
-    // this.name = localStorage.getItem('name');
-    // this.vehicleNumber = localStorage.getItem('vehicleNumber'),
-    // this.slotNumber = localStorage.getItem('slotNumber'),
-    // this.entryTime = localStorage.getItem('entryTime'),
-    // this.exitTime = localStorage.getItem('exitTime')
    }
   onlogout(){
-    localStorage.clear();
+     localStorage.clear();
      this.router.navigate(['signin']);
   }
 }

@@ -12,7 +12,11 @@ export class LoginComponent implements OnInit {
 
   constructor(private authenticationService : AuthenticationService, private route : Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(localStorage.getItem('token') != null){
+      this.route.navigate(['home'])
+    }
+  }
 
   loginForm = new FormGroup({
     email : new FormControl('', [Validators.required,Validators.email]),
@@ -26,23 +30,25 @@ export class LoginComponent implements OnInit {
        (res) => {
          console.log(res);
          
-            if(res.isAuth == true){
-              if(res.isAdmin == true){
+            if(res.result.isAuth == true){
+              if(res.result.isAdmin == true){
                  this.route.navigate(['dashboard'])
               }
               else{
                 if(res.userSlot != null){
-                      localStorage.setItem('id', res.userSlot.id);
-                       localStorage.setItem('name', res.userSlot.name);
-                       localStorage.setItem('vehicleNumber', res.userSlot.vehicleNumber);
-                       localStorage.setItem('slotNumber', res.userSlot.slotNumber);
-                       localStorage.setItem('entryTime', res.userSlot.entryTime);
-                       localStorage.setItem('exitTime', res.userSlot.exitTime);
-                       localStorage.setItem('email',res.userSlot.email);
+                      localStorage.setItem('token', res.token);
+                      localStorage.setItem('id', res.result.userSlot.id);
+                       localStorage.setItem('name', res.result.userSlot.name);
+                       localStorage.setItem('vehicleNumber', res.result.userSlot.vehicleNumber);
+                       localStorage.setItem('slotNumber', res.result.userSlot.slotNumber);
+                       localStorage.setItem('entryTime', res.result.userSlot.entryTime);
+                       localStorage.setItem('exitTime', res.result.userSlot.exitTime);
+                       localStorage.setItem('email',res.result.userSlot.email);
                        this.route.navigate(['home']);
                   }
                   else{
                     localStorage.setItem('email', this.loginForm.get('email')?.value)
+                    localStorage.setItem('token', res.token);
                     this.route.navigate(['home'])
                   } 
                 }
