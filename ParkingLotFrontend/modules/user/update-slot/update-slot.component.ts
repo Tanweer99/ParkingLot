@@ -49,7 +49,10 @@ export class UpdateSlotComponent implements OnInit {
     this.bookSlotService.UpdateUserBookedSlot(localStorage.getItem('id'), this.updateSlotForm.value,this.email).subscribe(
       (res) => {
         if(res) {
+          localStorage.setItem('name', this.updateSlotForm.get("name")?.value)
+          localStorage.setItem('exitTime', this.updateSlotForm.get("exitTime")?.value)
           alert('Your Slot updated Successfully!')
+          window.location.reload();
         }
         else{
           alert('Something went wrong!');

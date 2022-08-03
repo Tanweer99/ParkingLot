@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
                   } 
                 }
             }
-           else{
+            else{
             alert('Invalid Credentials!');
             window.location.reload();
            }

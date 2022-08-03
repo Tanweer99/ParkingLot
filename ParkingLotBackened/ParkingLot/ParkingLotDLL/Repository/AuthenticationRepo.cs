@@ -36,6 +36,7 @@ namespace ParkingLotDLL.Repository
                 var isEmailPresent = await _authCollection.Find(x => x.Email == signUp.Email).CountDocumentsAsync();
                 if (isEmailPresent == (long)0)
                 {
+                    signUp.Password = this.EncodeTo64(signUp.Password);
                     await _authCollection.InsertOneAsync(signUp);
                     result.IsSuccess = true;
                     result.Message = "SignedUp successfully!";
@@ -60,6 +61,7 @@ namespace ParkingLotDLL.Repository
             LoginMessage loginMessage = new LoginMessage();
             try
             {
+                password = this.EncodeTo64(password);
                 var result = await _authCollection.Find(x => x.Email == email && x.Password == password).FirstOrDefaultAsync();
                 if (result == null)
                 {
@@ -88,6 +90,14 @@ namespace ParkingLotDLL.Repository
             }
 
             return loginMessage;
+        }
+        private string EncodeTo64(string toEncode)
+        {
+            byte[] toEncodeAsBytes
+                  = System.Text.ASCIIEncoding.ASCII.GetBytes(toEncode);
+            string returnValue
+                  = System.Convert.ToBase64String(toEncodeAsBytes);
+            return returnValue;
         }
     }
 }
