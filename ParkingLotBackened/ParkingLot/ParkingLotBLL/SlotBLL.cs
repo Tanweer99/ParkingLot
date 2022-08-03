@@ -26,15 +26,29 @@ namespace ParkingLotBLL
             return await _slotRepo.CountAvailableSlot();
         }
 
-        public async Task<bool> CreateSlot(SlotDTO slotDto)
+        public async Task<bool> CreateSlot()
         {
-            var slot = _mapper.Map<Slot>(slotDto);
-            return await _slotRepo.CreateSlot(slot);
+            return await _slotRepo.CreateSlot();
         }
 
         public async Task<int> UpdateSlot()
         {
             return await _slotRepo.UpdateSlot();
+        }
+
+        public async Task<long> TotalCountSlots()
+        {
+            return await _slotRepo.TotalCountSlots();
+        }
+
+        public async Task<bool> CheckSlot(int slotNumber)
+        {
+            return await _slotRepo.CheckSlot(slotNumber);
+        }
+
+        public async Task DeleteSlot(int slotNumber)
+        {
+            await _slotRepo.DeleteSlot(slotNumber); 
         }
     }
 }

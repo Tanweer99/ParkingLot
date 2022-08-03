@@ -50,7 +50,7 @@ namespace ParkingLot.Controllers
             var result = await _authenticationBLL.Login(email, password);
             if(result.IsAdmin == false && result.IsAuth == false && result.UserSlot == null)
             {
-                return BadRequest();
+                return Ok(new { result = result});
             }
 
             var role = result.IsAdmin == true ? "Admin" : "User" ;
@@ -76,6 +76,22 @@ namespace ParkingLot.Controllers
                 result = result,
                 token = token
             });
+        }
+
+        [HttpGet]
+        [Route("OldPasswordMatch/{email}/{oldpassword}")]
+        public async Task<IActionResult> OldPasswordMatch(string email, string oldpassword)
+        {
+            var result =  await _authenticationBLL.OldPasswordMatch(oldpassword, email);
+            return Ok(result);
+        }
+
+        [HttpPut]
+        [Route("UpdateNewPassword/{email}")]
+        public async Task<IActionResult> UpdateNewPassword( UpdatePasswordDTO updatePasswordDTO, string email)
+        {
+            var result = await _authenticationBLL.UpdateNewPassword(email, updatePasswordDTO.NewPassword);
+            return Ok(result);
         }
     }
 }

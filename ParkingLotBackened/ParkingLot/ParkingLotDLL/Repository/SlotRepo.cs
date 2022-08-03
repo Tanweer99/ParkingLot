@@ -27,15 +27,18 @@ namespace ParkingLotDLL.Repository
 
         public async Task<long> CountAvailableSlot()
         {
-            var availableSlots = await _slotCollection.Find(x => x.IsAvailable == true).CountDocumentsAsync(); ;
+            var availableSlots = await _slotCollection.Find(x => x.IsAvailable == true).CountDocumentsAsync(); 
             return availableSlots;
         }
 
-        public async Task<bool> CreateSlot(Slot slot)
+        public async Task<bool> CreateSlot()
         {
             try
             {
-
+                var totalslots = await TotalCountSlots();
+                Slot slot = new Slot();
+                slot.IsAvailable = true;
+                slot.SlotNumber = (int)totalslots + 1;
                 await _slotCollection.InsertOneAsync(slot);
                 return true;
             }
@@ -87,6 +90,30 @@ namespace ParkingLotDLL.Repository
                 Console.WriteLine(ex.Message);
                 return false;
             }
+        }
+
+        public async Task<long> TotalCountSlots()
+        {
+            var totalSlots =  await _slotCollection.Find(x => x.Id != null).CountDocumentsAsync();
+            return totalSlots;
+        }
+
+        public async Task<bool> CheckSlot(int slotNumber)
+        {
+            var slotNumberDetails = await _slotCollection.Find(x => x.SlotNumber == slotNumber && x.IsAvailable == true).FirstOrDefaultAsync();
+            if(slotNumberDetails != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task DeleteSlot(int slotNumber)
+        {
+            await _slotCollection.DeleteOneAsync(x => x.SlotNumber == slotNumber);
         }
     }
 }

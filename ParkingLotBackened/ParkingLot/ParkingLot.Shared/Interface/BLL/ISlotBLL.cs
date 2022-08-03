@@ -10,7 +10,10 @@ namespace ParkingLot.Shared.Interface.BLL
     public interface ISlotBLL
     {
         Task<long> CountAvailableSlot();
-        Task<bool> CreateSlot(SlotDTO slotDto);
+        Task<bool> CreateSlot();
         Task<int> UpdateSlot();
+        Task<long> TotalCountSlots();
+        Task<bool> CheckSlot(int slotNumber);
+        Task DeleteSlot(int slotNumber);
     }
 }

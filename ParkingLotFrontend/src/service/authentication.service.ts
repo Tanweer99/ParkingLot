@@ -16,4 +16,12 @@ export class AuthenticationService {
   Authentication(email:any, password:any) : Observable<any>{
     return this._httpClient.get(`${this._baseURL}/api/Authentication/Login/${email}/${password}`)
   }
+  OldPasswordMatch(oldpassword:any, email:any): Observable<any>{
+     return this._httpClient.get(`${this._baseURL}/api/Authentication/OldPasswordMatch/${email}/${oldpassword}`);
+  }
+  UpdateNewPassword(updatePasswordForm:any,email:any) : Observable<any>{
+    console.log(updatePasswordForm);
+    
+    return this._httpClient.put(`${this._baseURL}/api/Authentication/UpdateNewPassword/${email}`, updatePasswordForm );
+  }
 }

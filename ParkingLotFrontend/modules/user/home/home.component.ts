@@ -15,20 +15,33 @@ export class HomeComponent implements OnInit {
   constructor(private slotService : SlotService, private router: Router, private bookSlotService:BookSlotService) { }
  
   numberOfAvailableSlots : any
-  totalSlots = 10
+  totalSlots :any
   availableSlots : any
   bookedSlots :any
 
   ngOnInit(): void {
-    this.slotService.CountAvailableSlot().subscribe(
+    this.slotService.TotalSlots().subscribe(
       (res) => {
-          this.availableSlots = res.count;
-          this.bookedSlots = this.totalSlots - res.count;
+        this.totalSlots = res.totalSlots 
+        this.slotService.CountAvailableSlot().subscribe(
+          (res) => {
+              this.availableSlots = res.count;
+              this.bookedSlots = this.totalSlots - res.count;
+          }
+        )
       }
     )
+    
    }
+
+
   onlogout(){
      localStorage.clear();
      this.router.navigate(['signin']);
   }
+
+  OnresetPasswordClick(){
+    this.router.navigate(['resetPassword']);
+  }
+
 }

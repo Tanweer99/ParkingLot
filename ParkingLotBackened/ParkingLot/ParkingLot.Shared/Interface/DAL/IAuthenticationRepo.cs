@@ -11,5 +11,7 @@ namespace ParkingLot.Shared.Interface.DAL
     {
         Task<RegisterMessage> Register(SignUp signUp);
         Task<LoginMessage> Login(string email, string password);
+        Task<bool> OldPasswordMatch(string oldPassword, string email);
+        Task<bool> UpdateNewPassword(string email, string newpassword);
     }
 }

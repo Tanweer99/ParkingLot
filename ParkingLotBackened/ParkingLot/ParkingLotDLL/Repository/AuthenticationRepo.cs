@@ -91,6 +91,39 @@ namespace ParkingLotDLL.Repository
 
             return loginMessage;
         }
+
+        public async Task<bool> OldPasswordMatch(string oldPassword, string email)
+        {
+            oldPassword = this.EncodeTo64(oldPassword);
+            var result = await _authCollection.Find(x => x.Email == email && x.Password == oldPassword).FirstOrDefaultAsync();
+            if(result != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateNewPassword(string email, string newpassword)
+        {
+            newpassword = this.EncodeTo64(newpassword);
+            var result = await _authCollection.Find(x => x.Email == email).FirstOrDefaultAsync();
+            if(result != null)
+            {
+                result.Password = newpassword;
+                await _authCollection.ReplaceOneAsync(x => x.Email == email, result);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+
         private string EncodeTo64(string toEncode)
         {
             byte[] toEncodeAsBytes

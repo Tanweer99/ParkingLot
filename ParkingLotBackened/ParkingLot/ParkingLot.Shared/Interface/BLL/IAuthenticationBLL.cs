@@ -11,5 +11,7 @@ namespace ParkingLot.Shared.Interface.BLL
     {
         Task<RegisterMessageDTO> Register(SignUpDTO signUpDTO);
         Task<LoginMessageDTO> Login(string email, string password);
+        Task<bool> OldPasswordMatch(string oldPassword, string email);
+        Task<bool> UpdateNewPassword(string email, string newpassword);
     }
 }

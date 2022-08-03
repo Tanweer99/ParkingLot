@@ -33,5 +33,15 @@ namespace ParkingLotBLL
             var login = await _authenticaionRepo.Login(email, password);
             return _mapper.Map<LoginMessageDTO>(login);
         }
+
+        public async Task<bool> OldPasswordMatch(string oldPassword, string email)
+        {
+            return await _authenticaionRepo.OldPasswordMatch(oldPassword, email);
+        }
+
+        public async Task<bool> UpdateNewPassword(string email, string newpassword)
+        {
+            return await _authenticaionRepo.UpdateNewPassword(email, newpassword);
+        }
     }
 }

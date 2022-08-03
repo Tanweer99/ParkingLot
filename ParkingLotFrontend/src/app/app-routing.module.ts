@@ -8,7 +8,9 @@ import { PageNotFoundComponent } from 'modules/user/page-not-found/page-not-foun
 import { UpdateSlotComponent } from 'modules/user/update-slot/update-slot.component';
 import { SignupComponent } from 'modules/authentication/signup/signup.component';
 import { DasboardComponent } from 'modules/admin/dasboard/dasboard.component';
+import { ResetpasswordComponent } from 'modules/user/resetpassword/resetpassword.component';
 import { AuthGuardGuard } from 'src/auth/auth-guard.guard';
+
 const routes: Routes = [
   {
     path : "addSlot", component : AddSlotComponent
@@ -27,6 +29,9 @@ const routes: Routes = [
   },
   {
     path : "signup", component: SignupComponent
+  },
+  {
+    path : "resetPassword", component : ResetpasswordComponent
   },
   {
     path : "signin" , component: LoginComponent

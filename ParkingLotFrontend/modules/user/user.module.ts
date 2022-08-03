@@ -6,6 +6,7 @@ import { AddSlotComponent } from './add-slot/add-slot.component';
 import { DeleteSlotComponent } from './delete-slot/delete-slot.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     UpdateSlotComponent,
     AddSlotComponent,
     DeleteSlotComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ResetpasswordComponent
   ],
   imports: [
     CommonModule,

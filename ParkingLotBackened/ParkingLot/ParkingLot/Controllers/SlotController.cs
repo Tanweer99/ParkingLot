@@ -29,10 +29,11 @@ namespace ParkingLot.Controllers
             }
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateSlot(SlotDTO slotDto)
+        [HttpGet]
+        [Route("CreateSlot")]
+        public async Task<IActionResult> CreateSlot()
         {
-            var result = await _slotBLL.CreateSlot(slotDto);
+            var result = await _slotBLL.CreateSlot();
             if(result)
             {
                 return Ok(result);
@@ -43,6 +44,35 @@ namespace ParkingLot.Controllers
             }
         }
 
-        
+        [HttpGet]
+        [Route("TotalSlots")]
+        public async Task<IActionResult> TotalSlots()
+        {
+            var result = await _slotBLL.TotalCountSlots();
+            return Ok(new { totalSlots = result});
+        }
+
+        [HttpGet]
+        [Route("CheckSlot/{slotNumber}")]
+        public async Task<IActionResult> CheckSlot(int slotNumber)
+        {
+            var result =  await _slotBLL.CheckSlot(slotNumber);
+            return Ok(result);
+        }
+
+        [HttpDelete]
+        [Route("DeleteSlot/{slotNumber}")]
+        public async Task<IActionResult> DeleteSlot(int slotNumber)
+        {
+            try
+            {
+                await _slotBLL.DeleteSlot(slotNumber);
+                return Ok(true);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
     }
 }

@@ -10,8 +10,11 @@ namespace ParkingLot.Shared.Interface.DAL
     public interface ISlotRepo
     {
         Task<long> CountAvailableSlot();
-        Task<bool> CreateSlot(Slot slot);
+        Task<bool> CreateSlot();
         Task<int> UpdateSlot();
         Task<bool> UpdateDeleteSlot(int slotNumber);
+        Task<long> TotalCountSlots();
+        Task<bool> CheckSlot(int slotNumber);
+        Task DeleteSlot(int slotNumber);
     }
 }

@@ -1,3 +1,74 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-primary" routerLink="home"><b>Online Parking System</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-lg-0">
+        <li class="nav-item ">
+          <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Slot Info
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <span class="dropdown-item" ><b>Total Slots</b> :  {{totalSlots}}</span> 
+              <span class="dropdown-item" ><b>Available Slots</b> :  {{availableSlots}}</span> 
+              <span class="dropdown-item" ><b>Booked Slots</b> :  {{bookedSlots}}</span> 
+              <hr>
+              <div class="d-flex">
+                <div class="btn btn-primary mt-1"  (click)="CreateSlot()">Create Slot</div>
+                <div class="btn btn-primary mt-1"  (click)="DeleteSlot()">Delete Slot</div>  
+              </div>
+            </div>
+          </div> -->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#slotInfo">
+            Slot Info
+          </button>
+
+        </li>
+        
+        
+      </ul>
+      <!-- <div class="d-flex" >
+        <button  class="text-primary btn" (click)="OnresetPasswordClick()">
+          Reset Password
+        </button>
+
+        <button class="logout btn btn-danger" (click)="onlogout()">logout</button>
+      </div> -->
+    </div>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="slotInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Slot Info</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="text-center d-flex justify-content-start">
+            <span class="dropdown-item" ><b>Total Slots</b> :  {{totalSlots}}</span> 
+            <span class="dropdown-item" ><b>Available Slots</b> :  {{availableSlots}}</span> 
+            <span class="dropdown-item" ><b>Booked Slots</b> :  {{bookedSlots}}</span> 
+          </div>
+          <hr>
+          <div class="d-flex justify-content-around">
+            <div class="btn btn-primary mt-1"  (click)="CreateSlot()">Create Slot</div>
+            <div class="btn btn-primary mt-1"  (click)="DeleteSlot()">Delete Slot</div>  
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
 <div class="adduserbtn">
   <button class="btn btn-primary">Add User</button>
 </div>
