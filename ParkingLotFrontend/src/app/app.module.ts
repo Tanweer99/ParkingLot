@@ -9,6 +9,7 @@ import { AuthenticationModule } from 'modules/authentication/authentication.modu
 import { AdminModule } from 'modules/admin/admin.module';
 import { BookSlotService } from 'src/service/book-slot.service';
 import { AuthInterceptor } from 'src/auth/auth.interceptor';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,11 @@ import { AuthInterceptor } from 'src/auth/auth.interceptor';
     NgbModule,
     UserModule,
     AuthenticationModule,
-    AdminModule
+    AdminModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true
+    })
   ],
   providers: [BookSlotService, {
     provide: HTTP_INTERCEPTORS,

@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
                  this.route.navigate(['dashboard'])
               }
               else{
-                if(res.userSlot != null){
+                if(res.result.userSlot != null){
                       localStorage.setItem('token', res.token);
                       localStorage.setItem('id', res.result.userSlot.id);
                        localStorage.setItem('name', res.result.userSlot.name);

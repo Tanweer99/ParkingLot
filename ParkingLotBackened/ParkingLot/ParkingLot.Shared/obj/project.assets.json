@@ -475,24 +475,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\henishjindal\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mdalam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+      "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
       "projectName": "ParkingLot.Shared",
-      "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
-      "packagesPath": "C:\\Users\\henishjindal\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\obj\\",
+      "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+      "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
+      "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\henishjindal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -546,7 +541,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.107\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
