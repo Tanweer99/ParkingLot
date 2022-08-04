@@ -58,3 +58,15 @@ D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLot\
 D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\refint\ParkingLot.Shared.dll
 D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.pdb
 D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ref\ParkingLot.Shared.dll
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\bin\Debug\net5.0\ParkingLot.Shared.deps.json
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\bin\Debug\net5.0\ParkingLot.Shared.dll
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\bin\Debug\net5.0\ParkingLot.Shared.pdb
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.csproj.AssemblyReference.cache
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.AssemblyInfoInputs.cache
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.AssemblyInfo.cs
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.csproj.CoreCompileInputs.cache
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.dll
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\refint\ParkingLot.Shared.dll
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ParkingLot.Shared.pdb
+D:\COX-Assignment\ParkingLotAssignment\ParkingLot\ParkingLotBackened\ParkingLotBackened\ParkingLot\ParkingLot.Shared\obj\Debug\net5.0\ref\ParkingLot.Shared.dll

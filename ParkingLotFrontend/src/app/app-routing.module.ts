@@ -25,7 +25,7 @@ const routes: Routes = [
     path : "updateSlot", component : UpdateSlotComponent
   },
   {
-    path: "dashboard" , component: DasboardComponent
+    path: "dashboard" , component: DasboardComponent, canActivate: [AuthGuardGuard]
   },
   {
     path : "signup", component: SignupComponent

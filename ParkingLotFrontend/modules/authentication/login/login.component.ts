@@ -13,8 +13,10 @@ export class LoginComponent implements OnInit {
   constructor(private authenticationService : AuthenticationService, private route : Router) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem('token') != null){
+    if(localStorage.getItem('token') != null && localStorage.getItem('isAdmin') == "false"){
       this.route.navigate(['home'])
+    }else{
+      this.route.navigate(['dashboard'])
     }
   }
 
@@ -29,6 +31,7 @@ export class LoginComponent implements OnInit {
     this.authenticationService.Authentication(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value).subscribe(
        (res) => {
             if(res.result.isAuth == true){
+              localStorage.setItem('isAdmin', res.result.isAdmin);
               if(res.result.isAdmin == true){
                 localStorage.setItem('email', this.loginForm.get('email')?.value)
                 localStorage.setItem('token', res.token);

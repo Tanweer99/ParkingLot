@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vztWYEdAhDN2wTXwEIFEtX9nbKpmtPiZ3gW9Z46S0on29JaI51kw7K1DnWQsJNT1LXcYo7Qm0+RS2n9IMYgw4A==",
+  "dgSpecHash": "7rz9a6HDr1NUiW+fksDdVTFFfqaI8+2MAbdffRgi9TwUBvFQHagJaTQMPQ/mgHBijpz8HAhmFurbtu5L+wfDFw==",
   "success": true,
-  "projectFilePath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj",
+  "projectFilePath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mdalam\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\mdalam\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

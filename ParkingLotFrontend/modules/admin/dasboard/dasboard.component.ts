@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SlotService } from 'src/service/slot.service';
 import { BookSlotService } from 'src/service/book-slot.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 declare var $ : any;
 
@@ -12,7 +13,7 @@ declare var $ : any;
 })
 export class DasboardComponent implements OnInit {
 
-  constructor(private slotService : SlotService, private bookedservice:BookSlotService) { }
+  constructor(private slotService : SlotService, private bookedservice:BookSlotService, private router:Router) { }
 
   totalSlots :any
   availableSlots : any
@@ -211,6 +212,12 @@ export class DasboardComponent implements OnInit {
     timeDifference /= 60;
     return (Math.round(timeDifference));
   }
+
+  // log out
+  onlogout(){
+    localStorage.clear();
+    this.router.navigate(['signin']);
+ }
 
 }
 

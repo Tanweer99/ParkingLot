@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DN3+MK2Y6VQ6vchVpooxVvk8Tmf16vxDc1+y4mjZJ1Xa1rC08aULWdNZ1yEu46ZHaMdUwiw0t3Rtvpnw+4z1ww==",
+  "dgSpecHash": "e/0sOoZjyFeoav/2RpdDfGAXN3NAjX/6DjuxaM120kde0mzM90EE61LDiD0BrHCs0+k1Yrt/GHIXfJPCa7OHaw==",
   "success": true,
-  "projectFilePath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+  "projectFilePath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mdalam\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\mdalam\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.17\\microsoft.aspnetcore.authentication.jwtbearer.5.0.17.nupkg.sha512",
