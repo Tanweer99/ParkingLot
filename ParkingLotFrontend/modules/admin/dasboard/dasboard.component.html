@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-lg-0">
         <li class="nav-item ">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#slotInfo">
+          <button type="button" class="btn btn-primary" (click)="OpenSlotInfoModal()">
             Slot Info
           </button>
         </li>
@@ -26,8 +26,8 @@
 <!-- List Of Booked List Users -->
 <div class="container mt-5">
 
-  <div *ngIf="!showtable">
-       <span class="text-secondary text-center">No slot has been booked yet!!</span>
+  <div *ngIf="!showtable" style="text-align:center">
+       <span class="text-secondary ">No slot has been booked yet!!</span>
   </div>
 
   <div *ngIf="showtable">
@@ -50,8 +50,8 @@
           <td>{{bookedslotuser.exitTime}}</td>
           <td>{{bookedslotuser.slotNumber}}</td>
           <td>
-            <button class="btn-info" style="color: #fff;">Update Slot</button>
-            <button class="btn-danger" style="margin-left: 5%;" (click)="openDeclineModal(bookedslotuser.id)">Delete Slot</button>
+            <button class="btn btn-info" style="color: #fff" (click)="OpenUpdateModal(bookedslotuser.id)">Update Slot</button>
+            <button class="btn btn-danger" style="margin-left: 5%" (click)="openDeclineModal(bookedslotuser.id)">Delete Slot</button>
           </td>
         </tr> 
       </tbody>
@@ -86,8 +86,9 @@
   </div>
 </div>
 
-<!--Delete Slot-->
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -96,11 +97,68 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      
       <div class="modal-body">
-          Are you sure you want to delete
+        Are you sure you want to delete.
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" (click)="onDeletebtn(currentbookslotid)">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Update Modal -->
+<div class="modal fade" id="updateSlot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Update Slot</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <form [formGroup] = "updateSlotForm" (ngSubmit)="onUpdateFormSubmit()" autocomplete="off">
+          <div class="form-group my-2">
+            <label class="validate" for="name">Name</label>
+            <input type="text" class="form-control"  formControlName="name" id="name"  placeholder="Enter name">
+            <span class="text-danger" *ngIf="updateSlotForm.get('name')?.touched && updateSlotForm.get('name')?.errors?.['required']" >Name is Required</span>
+          </div>
+    
+          <div class="form-group mb-2">
+            <label class="validate" for="vehicleNumber">Vehicle Number</label>
+            <input type="text" class="form-control" formControlName="vehicleNumber" id="vehicleNUmber"  placeholder="Enter vehicle number">
+            <div class="text-danger" *ngIf="updateSlotForm.get('vehicleNumber')?.touched && updateSlotForm.get('vehicleNumber')?.errors?.['required']" >Vehicle number is Required</div>
+            <div class="text-danger" *ngIf="updateSlotForm.get('vehicleNumber')?.touched  && updateSlotForm.get('vehicleNumber')?.errors?.['pattern']" >Invalid vehicle number</div>
+            <div class="text-danger" *ngIf="updateSlotForm.get('vehicleNumber')?.touched  && updateSlotForm.get('vehicleNumber')?.errors?.['maxlength']">Max 10-digit alphanumeric only</div>
+          </div>
+    
+          <div class="form-group mb-2">
+              <label class="validate" for="slotNumber">Slot Number</label>
+              <input type="number" class="form-control" formControlName="slotNumber" id="slotNumber">
+              <span class="text-danger" *ngIf="updateSlotForm.get('slotNumber')?.touched && updateSlotForm.get('slotNumber')?.errors?.['required']" >Slot Number is Required</span>
+              <span class="text-danger" *ngIf="showSlotMessage">This slot is already booked.</span>
+          </div>
+    
+          <div class="form-group mb-2">
+            <label class="validate" for="entryTime">Entry Time</label>
+            <input type="datetime-local" class="form-control" formControlName="entryTime" (change)="setEntryDateTime($event)" id="entryTime" >
+            <span class="text-danger" *ngIf="updateSlotForm.get('entryTime')?.touched && updateSlotForm.get('entryTime')?.errors?.['required']" >Entry time is Required</span>
+          </div>
+    
+          <div class="form-group mb-2">
+            <label class="validate" for="exitTime">Exit Time</label>
+            <input type="datetime-local" class="form-control" formControlName="exitTime" (change)="checkDateTime($event)" id="exitTime">
+            <span class="text-danger" *ngIf="updateSlotForm.get('exitTime')?.touched && updateSlotForm.get('exitTime')?.errors?.['required']" >Exit time is Required</span>
+            <span class="text-danger" *ngIf="updateSlotForm.get('exitTime')?.touched && updateSlotForm.get('exitTime')?.errors?.['required'] || displayErrorMessage" >Exit Time should be greater than Entry Time!</span>
+          </div>
+    
+          <div class=" text-center mb-4">
+            <button type="submit" [disabled]="!updateSlotForm.valid" class="btn btn-primary btn-block"> Update Slot </button>
+          </div> 
+        </form>
+
       </div>
     </div>
   </div>

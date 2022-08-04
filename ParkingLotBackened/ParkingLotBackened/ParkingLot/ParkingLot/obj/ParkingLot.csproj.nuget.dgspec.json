@@ -1,0 +1,289 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj": {}
+  },
+  "projects": {
+    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+        "projectName": "ParkingLot.Shared",
+        "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+        "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
+        "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.17.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj",
+        "projectName": "ParkingLotBLL",
+        "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj",
+        "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
+        "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
+                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj",
+        "projectName": "ParkingLotDLL",
+        "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj",
+        "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
+        "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
+                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.17.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
+        "projectName": "ParkingLot",
+        "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
+        "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
+        "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
+                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
+              },
+              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
+                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj"
+              },
+              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
+                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

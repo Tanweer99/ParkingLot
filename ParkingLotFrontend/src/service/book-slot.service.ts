@@ -24,8 +24,8 @@ export class BookSlotService {
     return this._httpClient.get(`${this._baseURL}/api/BookSlot/GetUserSlot/${slotNumber}`)
   }
 
-  UpdateUserBookedSlot(id:any, bookSlot:any,email:any) : Observable<any>{
-    return this._httpClient.put(`${this._baseURL}/api/BookSlot/UpdateUserBookedSlot/${id}/${email}`, bookSlot);
+  UpdateUserBookedSlot(id:any, bookSlot:any,email:any, previousSlotNumber : any) : Observable<any>{
+    return this._httpClient.put(`${this._baseURL}/api/BookSlot/UpdateUserBookedSlot/${id}/${email}/${previousSlotNumber}`, bookSlot);
   }
 
   DeleteSlot(id:any) : Observable<any>{

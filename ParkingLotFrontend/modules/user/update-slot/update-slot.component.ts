@@ -46,7 +46,7 @@ export class UpdateSlotComponent implements OnInit {
 
   onFormSubmit(){
 
-    this.bookSlotService.UpdateUserBookedSlot(localStorage.getItem('id'), this.updateSlotForm.value,this.email).subscribe(
+    this.bookSlotService.UpdateUserBookedSlot(localStorage.getItem('id'), this.updateSlotForm.value,this.email, this.updateSlotForm.get('slotNumber')?.value).subscribe(
       (res) => {
         if(res) {
           localStorage.setItem('name', this.updateSlotForm.get("name")?.value)

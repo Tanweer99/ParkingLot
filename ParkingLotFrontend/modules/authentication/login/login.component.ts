@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   onFormSubmit(){
     this.authenticationService.Authentication(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value).subscribe(
-       (res) => {   
+       (res) => {
             if(res.result.isAuth == true){
               if(res.result.isAdmin == true){
                 localStorage.setItem('email', this.loginForm.get('email')?.value)
@@ -38,13 +38,13 @@ export class LoginComponent implements OnInit {
                 if(res.result.userSlot != null){
                       localStorage.setItem('token', res.token);
                       localStorage.setItem('id', res.result.userSlot.id);
-                       localStorage.setItem('name', res.result.userSlot.name);
-                       localStorage.setItem('vehicleNumber', res.result.userSlot.vehicleNumber);
-                       localStorage.setItem('slotNumber', res.result.userSlot.slotNumber);
-                       localStorage.setItem('entryTime', res.result.userSlot.entryTime);
-                       localStorage.setItem('exitTime', res.result.userSlot.exitTime);
-                       localStorage.setItem('email',res.result.userSlot.email);
-                       this.route.navigate(['home']);
+                      localStorage.setItem('name', res.result.userSlot.name);
+                      localStorage.setItem('vehicleNumber', res.result.userSlot.vehicleNumber);
+                      localStorage.setItem('slotNumber', res.result.userSlot.slotNumber);
+                      localStorage.setItem('entryTime', res.result.userSlot.entryTime);
+                      localStorage.setItem('exitTime', res.result.userSlot.exitTime);
+                      localStorage.setItem('email',res.result.userSlot.email);
+                      this.route.navigate(['home']);
                   }
                   else{
                     localStorage.setItem('email', this.loginForm.get('email')?.value)
