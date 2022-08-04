@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SlotService } from 'src/service/slot.service';
 import { BookSlotService } from 'src/service/book-slot.service';
+
+declare var $ : any;
+
 @Component({
   selector: 'app-dasboard',
   templateUrl: './dasboard.component.html',
@@ -15,6 +18,7 @@ export class DasboardComponent implements OnInit {
   bookedSlots :any
   bookedslotlist: any
   showtable = true
+  currentbookslotid:any
 
   ngOnInit(): void {
     this.slotService.TotalSlots().subscribe(
@@ -60,7 +64,6 @@ export class DasboardComponent implements OnInit {
    }
 
    DeleteSlot(){
-
      this.slotService.CheckSlot(this.totalSlots).subscribe(
       (res) => {
         if(res ==true){
@@ -81,7 +84,30 @@ export class DasboardComponent implements OnInit {
         }
       },
       (err) => console.log(err)
-     )
-     
+     ) 
    }
+
+
+  openDeclineModal(bookedslotid:any){
+    this.currentbookslotid=bookedslotid;
+    $('#deleteModal').modal('show');
+  }
+
+  onDeletebtn(currentbookslotid:any){
+     this.bookedservice.DeleteSlot(currentbookslotid).subscribe(
+      (res) => {
+        if(res == true)
+        {
+          alert('Deleted Successfully!');
+          window.location.reload()
+        }
+        else{
+          alert('Some went wrong!');
+        }
+      },
+      (err) => { console.log(err); }
+     )
+  }
+
+  
 }
