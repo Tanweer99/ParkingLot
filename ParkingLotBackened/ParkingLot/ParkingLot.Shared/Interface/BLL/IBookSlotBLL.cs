@@ -15,5 +15,6 @@ namespace ParkingLot.Shared.Interface.BLL
         Task<bool> UpdateUserBookedSlot(string id, BookSlotDTO bookSlotDTO);
         Task<bool> DeleteSlot(string id);
         Task<BookSlotDTO> Authentication(string name, string vehicleNumber);
+        Task<List<BookSlotDTO>> BookedSlotsList();
     }
 }

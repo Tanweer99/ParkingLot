@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SlotService } from 'src/service/slot.service';
-
+import { BookSlotService } from 'src/service/book-slot.service';
 @Component({
   selector: 'app-dasboard',
   templateUrl: './dasboard.component.html',
@@ -8,11 +8,13 @@ import { SlotService } from 'src/service/slot.service';
 })
 export class DasboardComponent implements OnInit {
 
-  constructor(private slotService : SlotService) { }
+  constructor(private slotService : SlotService, private bookedservice:BookSlotService) { }
 
   totalSlots :any
   availableSlots : any
   bookedSlots :any
+  bookedslotlist: any
+  showtable = true
 
   ngOnInit(): void {
     this.slotService.TotalSlots().subscribe(
@@ -25,6 +27,20 @@ export class DasboardComponent implements OnInit {
           }
         )
       }
+    )
+ 
+    this.bookedservice.BookedSlotsList().subscribe(
+      (res) =>{
+          if(res != null){
+            this.showtable=true;
+            this.bookedslotlist = res;
+          } 
+          else{
+            this.showtable = false;
+            this.bookedslotlist= res;
+          }
+      },
+      (err) => console.log(err)
     )
    }
 
@@ -44,16 +60,28 @@ export class DasboardComponent implements OnInit {
    }
 
    DeleteSlot(){
-     this.slotService.DeleteSlot(this.totalSlots).subscribe(
+
+     this.slotService.CheckSlot(this.totalSlots).subscribe(
       (res) => {
-        if(res == true){
-          alert("Slot Deleted succesfully!");
-          window.location.reload();
-        }else{
-          alert("something went wrong!");
+        if(res ==true){
+          this.slotService.DeleteSlot(this.totalSlots).subscribe(
+            (res) => {
+              if(res == true){
+                alert("Slot Deleted succesfully!");
+                window.location.reload();
+              }else{
+                alert("something went wrong!");
+              }
+            },
+            (err) => console.log(err)
+          )
+        }
+        else{
+          alert('Slot is already booked.Cannot be deleted!!');
         }
       },
       (err) => console.log(err)
-    )
+     )
+     
    }
 }

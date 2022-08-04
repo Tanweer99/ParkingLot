@@ -1365,19 +1365,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mdalam\\.nuget\\packages\\": {}
+    "C:\\Users\\henishjindal\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
+      "projectUniqueName": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
       "projectName": "ParkingLot",
-      "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
-      "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
-      "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\obj\\",
+      "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
+      "packagesPath": "C:\\Users\\henishjindal\\.nuget\\packages\\",
+      "outputPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\henishjindal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1391,14 +1396,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
-              "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
+            "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
+              "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
             },
-            "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
-              "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj"
+            "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
+              "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj"
             },
-            "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
-              "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
+            "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
+              "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
             }
           }
         }
@@ -1440,7 +1445,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.107\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -35,5 +35,9 @@ export class BookSlotService {
   Authentication(name:any, vehicleNumber:any) : Observable<any>{
     return this._httpClient.get(`${this._baseURL}/api/BookSlot/Authentication/${name}/${vehicleNumber}`)
   }
+   
+  BookedSlotsList(): Observable<any>{
+    return this._httpClient.get(`${this._baseURL}/api/BookSlot/BookedSlotsList`)
+  }
 
 }

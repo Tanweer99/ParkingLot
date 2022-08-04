@@ -3,13 +3,14 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ParkingLot.Shared.DTO;
 using ParkingLot.Shared.Interface.BLL;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ParkingLot.Controllers
 {
     [ApiController]
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "User,Admin")]
     [Route("api/[controller]")]
     public class BookSlotController : Controller
     {
@@ -101,6 +102,22 @@ namespace ParkingLot.Controllers
         {
             var userSlot = await _bookSlotBLL.Authentication(name, vehicleNumber);
             return Ok(new { UserSlot = userSlot });
+        }
+
+        [HttpGet]
+        [Route("BookedSlotsList")]
+        public async Task<IActionResult> BookedSlotsList()
+        {
+            try
+            {
+                List<BookSlotDTO> bookSlotDTOs = await _bookSlotBLL.BookedSlotsList();
+                return Ok(bookSlotDTOs);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest();
+            }
         }
     }
 }

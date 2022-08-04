@@ -23,6 +23,7 @@ namespace ParkingLotDLL.Repository
                 parkingLotDbSetting.Value.DatabaseName);
             _slotCollection = mongoDatabase.GetCollection<Slot>(
                 parkingLotDbSetting.Value.SlotCollectionName);
+            
         }
 
         public async Task<long> CountAvailableSlot()
@@ -115,5 +116,7 @@ namespace ParkingLotDLL.Repository
         {
             await _slotCollection.DeleteOneAsync(x => x.SlotNumber == slotNumber);
         }
+
+
     }
 }

@@ -15,5 +15,6 @@ namespace ParkingLot.Shared.Interface.DAL
         Task<bool> UpdateUserBookedSlot(string id, BookSlot updatetedBookSlot);
         Task<bool> DeleteSlot(string id);
         Task<BookSlot> Authentication(string name, string vehicleNumber);
+        Task<List<BookSlot>> BookedSlotsList();
     }
 }

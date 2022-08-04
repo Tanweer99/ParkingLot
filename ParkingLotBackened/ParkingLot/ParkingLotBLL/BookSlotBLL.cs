@@ -54,5 +54,10 @@ namespace ParkingLotBLL
             var userSlot = await _bookSlotRepo.Authentication(name, vehicleNumber); 
             return _mapper.Map<BookSlotDTO>(userSlot);
         }
+        public async Task<List<BookSlotDTO>> BookedSlotsList()
+        {
+            List<BookSlot> bookslotlist = await _bookSlotRepo.BookedSlotsList();
+            return  _mapper.Map<List<BookSlotDTO>>(bookslotlist);
+        }
     }
 }

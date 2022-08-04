@@ -124,8 +124,21 @@ namespace ParkingLotDLL.Repository
                 Console.WriteLine(ex.Message);
                 return null;
             }
-            
+        }
 
+        public async Task<List<BookSlot>> BookedSlotsList()
+        {
+            List<BookSlot> bookSlotslist = new List<BookSlot>();
+            try
+            {
+               bookSlotslist = await _bookSlotCollection.Find(x => x.Status == true).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return bookSlotslist;
         }
     }
 }

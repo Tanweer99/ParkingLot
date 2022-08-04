@@ -27,12 +27,12 @@ export class LoginComponent implements OnInit {
 
   onFormSubmit(){
     this.authenticationService.Authentication(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value).subscribe(
-       (res) => {
-         console.log(res);
-         
+       (res) => {   
             if(res.result.isAuth == true){
               if(res.result.isAdmin == true){
-                 this.route.navigate(['dashboard'])
+                localStorage.setItem('email', this.loginForm.get('email')?.value)
+                localStorage.setItem('token', res.token);
+                this.route.navigate(['dashboard'])
               }
               else{
                 if(res.result.userSlot != null){

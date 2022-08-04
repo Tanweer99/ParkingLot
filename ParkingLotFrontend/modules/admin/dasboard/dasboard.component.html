@@ -8,42 +8,59 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-lg-0">
         <li class="nav-item ">
-          <!-- <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Slot Info
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <span class="dropdown-item" ><b>Total Slots</b> :  {{totalSlots}}</span> 
-              <span class="dropdown-item" ><b>Available Slots</b> :  {{availableSlots}}</span> 
-              <span class="dropdown-item" ><b>Booked Slots</b> :  {{bookedSlots}}</span> 
-              <hr>
-              <div class="d-flex">
-                <div class="btn btn-primary mt-1"  (click)="CreateSlot()">Create Slot</div>
-                <div class="btn btn-primary mt-1"  (click)="DeleteSlot()">Delete Slot</div>  
-              </div>
-            </div>
-          </div> -->
-          <!-- Button trigger modal -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#slotInfo">
             Slot Info
           </button>
-
         </li>
-        
-        
       </ul>
-      <!-- <div class="d-flex" >
-        <button  class="text-primary btn" (click)="OnresetPasswordClick()">
-          Reset Password
-        </button>
-
-        <button class="logout btn btn-danger" (click)="onlogout()">logout</button>
-      </div> -->
     </div>
   </div>
 </nav>
 
-<!-- Modal -->
+<!-- Add User Button-->
+<!-- <div class="adduserbtn">
+  <button class="btn btn-primary">Add User</button>
+</div> -->
+
+
+<!-- List Of Booked List Users -->
+<div class="container mt-5">
+
+  <div *ngIf="!showtable">
+       <span class="text-secondary text-center">No slot has been booked yet!!</span>
+  </div>
+
+  <div *ngIf="showtable">
+    <table class="table" >
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Vehicle Number</th>
+          <th scope="col">Entry Time</th>
+          <th scope="col">Exit Time</th>
+          <th scope="col">Slot Number</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let bookedslotuser of bookedslotlist">
+          <th scope="row">{{bookedslotuser.name}}</th>
+          <td>{{bookedslotuser.vehicleNumber}}</td>
+          <td>{{bookedslotuser.entryTime}}</td>
+          <td>{{bookedslotuser.exitTime}}</td>
+          <td>{{bookedslotuser.slotNumber}}</td>
+          <td>
+            <button class="btn-info" style="color: #fff;">Update Slot</button>
+            <button class="btn-danger" style="margin-left: 5%;">Delete Slot</button>
+          </td>
+        </tr> 
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  <!-- Slot Info Modal -->
 <div class="modal fade" id="slotInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -67,46 +84,4 @@
       </div>
     </div>
   </div>
-  </div>
-
-<div class="adduserbtn">
-  <button class="btn btn-primary">Add User</button>
 </div>
-<div class="container">
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Vechile Number</th>
-        <th scope="col">Entry Time</th>
-        <th scope="col">Exit Time</th>
-        <th scope="col">Slot Number</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody >
-     <!-- <tr>
-        <th scope="row">{{bookedSlot.name}}</th>
-        <td>{{bookedSlot.vechileNumber}}</td>
-        <td>{{bookedSlot.entryTime}}</td>
-        <td>{{bookedSlot.exitTime}}</td>
-        <td>{{bookedSlot.slotNumber}}</td>
-        <td>
-            <button>Update Slot</button>
-            <button>Delete Slot</button>
-        </td>
-      </tr> -->
-      <tr>
-        <th scope="row">harry</th>
-        <td>Qw12QW1212</td>
-        <td>2022-09-09T12:09</td>
-        <td>2022-09-09T12:09</td>
-        <td>5</td>
-        <td>
-            <button class="btn btn-secondary" style="margin-right: 10px;">Update Slot</button>
-            <button class="btn btn-danger">Delete Slot</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
