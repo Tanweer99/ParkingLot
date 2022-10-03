@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj": {}
+    "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj": {}
   },
   "projects": {
-    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
+    "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+        "projectUniqueName": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
         "projectName": "ParkingLot.Shared",
-        "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
-        "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
-        "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\obj\\",
+        "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj",
+        "packagesPath": "C:\\Users\\henishjindal\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\henishjindal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,21 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
+    "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj",
+        "projectUniqueName": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj",
         "projectName": "ParkingLotBLL",
-        "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj",
-        "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
-        "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\obj\\",
+        "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj",
+        "packagesPath": "C:\\Users\\henishjindal\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\henishjindal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +97,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
-                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
+              "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
+                "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
               }
             }
           }
@@ -123,7 +124,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -132,21 +134,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
+    "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj",
+        "projectUniqueName": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj",
         "projectName": "ParkingLotDLL",
-        "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj",
-        "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
-        "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\obj\\",
+        "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj",
+        "packagesPath": "C:\\Users\\henishjindal\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\henishjindal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,8 +162,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
-                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
+              "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
+                "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
               }
             }
           }
@@ -195,7 +197,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -204,21 +207,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj": {
+    "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
+        "projectUniqueName": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
         "projectName": "ParkingLot",
-        "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
-        "packagesPath": "C:\\Users\\mdalam\\.nuget\\packages\\",
-        "outputPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\obj\\",
+        "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\ParkingLot.csproj",
+        "packagesPath": "C:\\Users\\henishjindal\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mdalam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\henishjindal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -232,14 +235,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
-                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
+              "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj": {
+                "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLot.Shared\\ParkingLot.Shared.csproj"
               },
-              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
-                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj"
+              "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj": {
+                "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotBLL\\ParkingLotBLL.csproj"
               },
-              "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
-                "projectPath": "D:\\COX-Assignment\\ParkingLotAssignment\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
+              "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj": {
+                "projectPath": "D:\\OneDrive - Nagarro\\Desktop\\Parkinglot\\ParkingLot\\ParkingLotBackened\\ParkingLotBackened\\ParkingLot\\ParkingLotDLL\\ParkingLotDLL.csproj"
               }
             }
           }
@@ -269,7 +272,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -281,7 +285,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
